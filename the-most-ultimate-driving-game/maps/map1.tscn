@@ -1,0 +1,70 @@
+[gd_scene load_steps=10 format=3 uid="uid://ch48vep24tw6n"]
+
+[ext_resource type="Texture2D" uid="uid://ck0d66p8gpxt4" path="res://images/emelkedo.png" id="1_dir8h"]
+[ext_resource type="PackedScene" uid="uid://d0xvrysceu8ot" path="res://cars/car1.tscn" id="1_rkj35"]
+[ext_resource type="Texture2D" uid="uid://cmo10ucndgq3g" path="res://images/road.png" id="2_7dfyu"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_17ebq"]
+a = Vector2(572, 405)
+b = Vector2(-16, 404)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_nxseg"]
+a = Vector2(564, 327)
+b = Vector2(-15, 325)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_lo85r"]
+a = Vector2(727, 190)
+b = Vector2(461, 326)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_82wqq"]
+a = Vector2(834, 271)
+b = Vector2(569, 407)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_7jfso"]
+a = Vector2(1180, 190)
+b = Vector2(819, 192)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_nsdte"]
+a = Vector2(1179, 270)
+b = Vector2(834, 272)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+
+[node name="Emelkedo" type="Sprite2D" parent="CharacterBody2D"]
+position = Vector2(704.25, 313.00003)
+scale = Vector2(7.1222215, 5)
+texture = ExtResource("1_dir8h")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(-1, 2)
+shape = SubResource("SegmentShape2D_17ebq")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="CharacterBody2D"]
+shape = SubResource("SegmentShape2D_nxseg")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(101, 1)
+shape = SubResource("SegmentShape2D_lo85r")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(1, 0)
+shape = SubResource("SegmentShape2D_82wqq")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="CharacterBody2D"]
+shape = SubResource("SegmentShape2D_7jfso")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="CharacterBody2D"]
+shape = SubResource("SegmentShape2D_nsdte")
+
+[node name="CharacterBody2D2" type="CharacterBody2D" parent="."]
+
+[node name="Road" type="Sprite2D" parent="CharacterBody2D2"]
+z_index = -1
+position = Vector2(104, 443)
+scale = Vector2(5, 5)
+texture = ExtResource("2_7dfyu")
+
+[node name="Node2D" parent="." instance=ExtResource("1_rkj35")]
+position = Vector2(87, 345)

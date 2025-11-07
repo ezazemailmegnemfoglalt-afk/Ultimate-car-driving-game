@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://bxydnaidg0hnj"]
+
+[ext_resource type="Texture2D" uid="uid://bkqv5mmp0ataj" path="res://images/icon.jpg" id="1_nfie2"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_tbn0q"]
+a = Vector2(-133, 6)
+b = Vector2(9, -102)
+
+[node name="Node2D" type="CharacterBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -2)
+shape = SubResource("SegmentShape2D_tbn0q")
+
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(20.00003, 13)
+scale = Vector2(0.2998047, 0.23193361)
+texture = ExtResource("1_nfie2")

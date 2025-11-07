@@ -1,0 +1,50 @@
+[gd_scene load_steps=7 format=3 uid="uid://d0xvrysceu8ot"]
+
+[ext_resource type="Texture2D" uid="uid://dta4n3qvbk7hk" path="res://images/car1.png" id="1_3bwdr"]
+[ext_resource type="Script" uid="uid://tcqbyjtqht0m" path="res://cars/car_1.gd" id="1_ru40v"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ru40v"]
+radius = 22.561028
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ru40v"]
+atlas = ExtResource("1_3bwdr")
+region = Rect2(0, 0, 325, 157)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3bwdr"]
+atlas = ExtResource("1_3bwdr")
+region = Rect2(325, 0, 325, 157)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_650wv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ru40v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3bwdr")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Node2D" type="CharacterBody2D"]
+script = ExtResource("1_ru40v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-60, 16)
+shape = SubResource("CircleShape2D_ru40v")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position_smoothing_enabled = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(8, -17)
+sprite_frames = SubResource("SpriteFrames_650wv")
+flip_h = true
+
+[node name="front" type="Marker2D" parent="AnimatedSprite2D"]
+position = Vector2(103, 14)
+
+[node name="back" type="Marker2D" parent="AnimatedSprite2D"]
+position = Vector2(-96, 9)

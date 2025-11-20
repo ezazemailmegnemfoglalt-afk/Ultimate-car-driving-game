@@ -28,23 +28,18 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Node2D" type="CharacterBody2D"]
+[node name="car" type="CharacterBody2D" groups=["player"]]
 script = ExtResource("1_ru40v")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-60, 16)
+[node name="hitbox" type="CollisionShape2D" parent="." groups=["player"]]
+position = Vector2(92, 19)
 shape = SubResource("CircleShape2D_ru40v")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2, 2)
 position_smoothing_enabled = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(8, -17)
+position = Vector2(13, -20)
 sprite_frames = SubResource("SpriteFrames_650wv")
 flip_h = true
-
-[node name="front" type="Marker2D" parent="AnimatedSprite2D"]
-position = Vector2(103, 14)
-
-[node name="back" type="Marker2D" parent="AnimatedSprite2D"]
-position = Vector2(-96, 9)

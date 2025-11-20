@@ -1,5 +1,6 @@
 extends CharacterBody2D
 
+@onready var car =  $AnimatedSprite2D
 
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
@@ -18,11 +19,26 @@ func _physics_process(delta: float) -> void:
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var direction := Input.get_axis("ui_left", "ui_right")
 	if direction:
-		velocity.x = direction * SPEED
+		if Input.is_action_pressed("ui_left"):
+			car.flip_h = false
+			velocity.x = direction * SPEED
+		else:
+			car.flip_h = true
+			velocity.x = direction * SPEED
 	else:
+		if car.flip_h == true:
+			car.flip_h = true
+		else:
+			car.flip_h = false
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	move_and_slide()
-	
+
+
+
+
+func _diable_input():
+	set_process_input(false)
+
 func _die():
 	queue_free()

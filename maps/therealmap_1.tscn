@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://cf7e3mfbm12cd"]
+
+[ext_resource type="PackedScene" uid="uid://dumraa3ngb50j" path="res://objects/road.tscn" id="1_7pq76"]
+[ext_resource type="PackedScene" uid="uid://c0qwnjyikbwgh" path="res://objects/finish.tscn" id="2_irrur"]
+[ext_resource type="PackedScene" uid="uid://dcrebj547jojk" path="res://objects/start.tscn" id="3_t2lcv"]
+
+[node name="therealmap1" type="Node2D"]
+
+[node name="road" parent="." instance=ExtResource("1_7pq76")]
+position = Vector2(0, 26)
+
+[node name="road" parent="road" instance=ExtResource("1_7pq76")]
+position = Vector2(240, 0)
+
+[node name="road" parent="road/road" instance=ExtResource("1_7pq76")]
+position = Vector2(239, 0)
+
+[node name="finish" parent="road/road" instance=ExtResource("2_irrur")]
+position = Vector2(478, 0)
+
+[node name="start" parent="." instance=ExtResource("3_t2lcv")]
+position = Vector2(-240, 28)

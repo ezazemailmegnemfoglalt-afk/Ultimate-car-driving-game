@@ -14,7 +14,7 @@ b = Vector2(238, -1)
 size = Vector2(49, 76)
 
 [node name="finish" type="Node2D"]
-z_index = -1
+z_index = -2
 script = ExtResource("1_332tb")
 
 [node name="Finish" type="Sprite2D" parent="."]
@@ -59,4 +59,23 @@ texture = ExtResource("4_t63jo")
 position = Vector2(2, 84)
 shape = SubResource("SegmentShape2D_wymro")
 
+[node name="endoptions" type="Node2D" parent="."]
+z_index = 4
+
+[node name="retry" type="Button" parent="endoptions"]
+offset_left = -136.0
+offset_top = -111.0
+offset_right = -46.0
+offset_bottom = -41.0
+text = "Retry"
+
+[node name="back" type="Button" parent="endoptions"]
+offset_left = 60.0
+offset_top = -106.0
+offset_right = 160.0
+offset_bottom = -36.0
+text = "Back"
+
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="pressed" from="endoptions/retry" to="." method="_on_retry_pressed"]
+[connection signal="pressed" from="endoptions/back" to="." method="_on_back_pressed"]

@@ -9,133 +9,55 @@ metadata/_edit_vertical_guides_ = [150.0, 450.0]
 metadata/_edit_horizontal_guides_ = [142.0]
 
 [node name="cameraman" type="CharacterBody2D" parent="."]
+visible = false
 script = ExtResource("1_ffv1y")
 
 [node name="Camera2D" type="Camera2D" parent="cameraman"]
 position = Vector2(201, 209)
 
 [node name="left" type="Button" parent="cameraman"]
-offset_left = 82.0
-offset_top = 78.0
-offset_right = 121.0
-offset_bottom = 113.0
+offset_left = -80.0
+offset_top = 250.0
+offset_right = -30.0
+offset_bottom = 300.0
 text = "<"
 
 [node name="right" type="Button" parent="cameraman"]
-offset_left = 310.0
-offset_top = 75.0
-offset_right = 347.0
-offset_bottom = 113.0
+offset_left = 300.0
+offset_top = 250.0
+offset_right = 350.0
+offset_bottom = 300.0
 text = ">"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="cameraman"]
 position = Vector2(201, 192)
 shape = SubResource("CapsuleShape2D_ffv1y")
 
-[node name="exit" type="Button" parent="cameraman"]
-offset_left = 156.0
-offset_top = 160.0
-offset_right = 277.0
-offset_bottom = 191.0
-text = "Back"
-
 [node name="w1" type="Node2D" parent="."]
 
 [node name="Button" type="Button" parent="w1"]
-offset_left = 151.0
-offset_top = 28.0
-offset_right = 284.0
-offset_bottom = 141.0
-pivot_offset = Vector2(623, 37)
+offset_top = 150.0
+offset_right = 133.0
+offset_bottom = 263.0
+scale = Vector2(2, 2)
 text = "World 1"
-
-[node name="w1maps" type="Node2D" parent="w1"]
-position = Vector2(56, 20)
-
-[node name="1" type="Button" parent="w1/w1maps"]
-offset_left = 15.0
-offset_top = 16.0
-offset_right = 48.0
-offset_bottom = 47.0
-text = "1"
-
-[node name="10" type="Button" parent="w1/w1maps"]
-offset_left = 275.0
-offset_top = 95.0
-offset_right = 308.0
-offset_bottom = 126.0
-text = "10"
-
-[node name="9" type="Button" parent="w1/w1maps"]
-offset_left = 208.0
-offset_top = 93.0
-offset_right = 241.0
-offset_bottom = 124.0
-text = "9"
-
-[node name="8" type="Button" parent="w1/w1maps"]
-offset_left = 148.0
-offset_top = 92.0
-offset_right = 181.0
-offset_bottom = 123.0
-text = "8"
-
-[node name="7" type="Button" parent="w1/w1maps"]
-offset_left = 77.0
-offset_top = 89.0
-offset_right = 110.0
-offset_bottom = 120.0
-text = "7"
-
-[node name="6" type="Button" parent="w1/w1maps"]
-offset_left = 18.0
-offset_top = 88.0
-offset_right = 51.0
-offset_bottom = 119.0
-text = "6"
-
-[node name="5" type="Button" parent="w1/w1maps"]
-offset_left = 269.0
-offset_top = 21.0
-offset_right = 302.0
-offset_bottom = 52.0
-text = "5"
-
-[node name="4" type="Button" parent="w1/w1maps"]
-offset_left = 203.0
-offset_top = 18.0
-offset_right = 236.0
-offset_bottom = 49.0
-text = "4"
-
-[node name="3" type="Button" parent="w1/w1maps"]
-offset_left = 143.0
-offset_top = 17.0
-offset_right = 176.0
-offset_bottom = 48.0
-text = "3"
-
-[node name="2" type="Button" parent="w1/w1maps"]
-offset_left = 82.0
-offset_top = 16.0
-offset_right = 115.0
-offset_bottom = 47.0
-text = "2"
 
 [node name="w2" type="Node2D" parent="."]
 position = Vector2(-1, 3)
 
 [node name="w2" type="Button" parent="w2"]
-offset_left = 452.0
-offset_top = 24.0
-offset_right = 585.0
-offset_bottom = 137.0
+offset_left = 500.0
+offset_top = 150.0
+offset_right = 633.0
+offset_bottom = 263.0
+scale = Vector2(2, 2)
 text = "World 2
 "
 
 [node name="w2maps" type="Node2D" parent="w2"]
 visible = false
-position = Vector2(355, 6)
+position = Vector2(320, 120)
+scale = Vector2(2, 2)
 
 [node name="1" type="Button" parent="w2/w2maps"]
 offset_left = 15.0
@@ -211,16 +133,18 @@ text = "2"
 position = Vector2(-1, 3)
 
 [node name="w3b" type="Button" parent="w3"]
-offset_left = 750.0
-offset_top = 26.0
-offset_right = 883.0
-offset_bottom = 139.0
+offset_left = 1000.0
+offset_top = 150.0
+offset_right = 1133.0
+offset_bottom = 263.0
+scale = Vector2(2, 2)
 text = "World 3
 "
 
 [node name="w2maps" type="Node2D" parent="w3"]
 visible = false
-position = Vector2(657, 15)
+position = Vector2(812, 130)
+scale = Vector2(2, 2)
 
 [node name="1" type="Button" parent="w3/w2maps"]
 offset_left = 15.0
@@ -296,16 +220,18 @@ text = "2"
 position = Vector2(-1, 3)
 
 [node name="w4b" type="Button" parent="w4"]
-offset_left = 1050.0
-offset_top = 26.0
-offset_right = 1183.0
-offset_bottom = 139.0
+offset_left = 1500.0
+offset_top = 150.0
+offset_right = 1633.0
+offset_bottom = 263.0
+scale = Vector2(2, 2)
 text = "World 4
 "
 
 [node name="w2maps" type="Node2D" parent="w4"]
 visible = false
-position = Vector2(963, 16)
+position = Vector2(1319, 122)
+scale = Vector2(2, 2)
 
 [node name="1" type="Button" parent="w4/w2maps"]
 offset_left = 15.0
@@ -381,16 +307,18 @@ text = "2"
 position = Vector2(0, 1)
 
 [node name="w5b" type="Button" parent="w5"]
-offset_left = 1350.0
-offset_top = 25.0
-offset_right = 1483.0
-offset_bottom = 138.0
+offset_left = 2000.0
+offset_top = 150.0
+offset_right = 2133.0
+offset_bottom = 263.0
+scale = Vector2(2, 2)
 text = "World 5
 "
 
 [node name="w2maps" type="Node2D" parent="w5"]
 visible = false
-position = Vector2(1251, 7)
+position = Vector2(1809, 119)
+scale = Vector2(2, 2)
 
 [node name="1" type="Button" parent="w5/w2maps"]
 offset_left = 15.0
@@ -464,7 +392,6 @@ text = "2"
 
 [connection signal="pressed" from="cameraman/left" to="cameraman" method="_on_left_pressed"]
 [connection signal="pressed" from="cameraman/right" to="cameraman" method="_on_right_pressed"]
-[connection signal="pressed" from="cameraman/exit" to="cameraman" method="_on_exit_pressed"]
 [connection signal="pressed" from="w1/Button" to="cameraman" method="_on_button_pressed"]
 [connection signal="pressed" from="w2/w2" to="cameraman" method="_on_w_2_pressed"]
 [connection signal="pressed" from="w3/w3b" to="cameraman" method="_on_w_3b_pressed"]

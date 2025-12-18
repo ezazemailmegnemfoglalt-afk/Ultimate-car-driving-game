@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://cdsbwj1hedadi"]
+
+[ext_resource type="PackedScene" uid="uid://dcrebj547jojk" path="res://objects/start.tscn" id="1_rv7jw"]
+[ext_resource type="PackedScene" uid="uid://dumraa3ngb50j" path="res://objects/road.tscn" id="2_m6m5b"]
+[ext_resource type="PackedScene" uid="uid://c0qwnjyikbwgh" path="res://objects/finish.tscn" id="3_m6m5b"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="start" parent="." instance=ExtResource("1_rv7jw")]
+position = Vector2(63, 229)
+
+[node name="road" parent="." instance=ExtResource("2_m6m5b")]
+position = Vector2(493, 234)
+
+[node name="road2" parent="." instance=ExtResource("2_m6m5b")]
+position = Vector2(998, 231)
+
+[node name="road3" parent="." instance=ExtResource("2_m6m5b")]
+position = Vector2(1393, 155)
+
+[node name="road4" parent="." instance=ExtResource("2_m6m5b")]
+position = Vector2(1725, 78)
+
+[node name="road5" parent="." instance=ExtResource("2_m6m5b")]
+position = Vector2(2030, 40)
+
+[node name="finish" parent="." instance=ExtResource("3_m6m5b")]
+position = Vector2(2270, 41)

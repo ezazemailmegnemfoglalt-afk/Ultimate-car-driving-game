@@ -1,0 +1,100 @@
+[gd_scene load_steps=2 format=3 uid="uid://cqo78uhc0vt"]
+
+[ext_resource type="Script" uid="uid://830spphi4r0g" path="res://maps/mapsw_1.gd" id="1_wd8g6"]
+
+[node name="mapsw1" type="Node2D"]
+script = ExtResource("1_wd8g6")
+
+[node name="exit" type="Button" parent="."]
+offset_left = 329.0
+offset_top = 501.0
+offset_right = 569.0
+offset_bottom = 532.0
+scale = Vector2(2, 2)
+text = "Back"
+
+[node name="w1maps" type="Node2D" parent="."]
+position = Vector2(246, 185)
+scale = Vector2(2, 2)
+
+[node name="map1btn" type="Button" parent="w1maps"]
+offset_left = 15.0
+offset_top = 16.0
+offset_right = 48.0
+offset_bottom = 47.0
+text = "1"
+
+[node name="map2btn" type="Button" parent="w1maps"]
+offset_left = 82.0
+offset_top = 16.0
+offset_right = 115.0
+offset_bottom = 47.0
+text = "2"
+
+[node name="map3btn" type="Button" parent="w1maps"]
+offset_left = 143.0
+offset_top = 17.0
+offset_right = 176.0
+offset_bottom = 48.0
+text = "3"
+
+[node name="map4btn" type="Button" parent="w1maps"]
+offset_left = 203.0
+offset_top = 18.0
+offset_right = 236.0
+offset_bottom = 49.0
+text = "4"
+
+[node name="map5btn" type="Button" parent="w1maps"]
+offset_left = 269.0
+offset_top = 21.0
+offset_right = 302.0
+offset_bottom = 52.0
+text = "5"
+
+[node name="map6btn" type="Button" parent="w1maps"]
+offset_left = 18.0
+offset_top = 88.0
+offset_right = 51.0
+offset_bottom = 119.0
+text = "6"
+
+[node name="map7btn" type="Button" parent="w1maps"]
+offset_left = 77.0
+offset_top = 89.0
+offset_right = 110.0
+offset_bottom = 120.0
+text = "7"
+
+[node name="map8btn" type="Button" parent="w1maps"]
+offset_left = 148.0
+offset_top = 92.0
+offset_right = 181.0
+offset_bottom = 123.0
+text = "8"
+
+[node name="map9btn" type="Button" parent="w1maps"]
+offset_left = 208.0
+offset_top = 93.0
+offset_right = 241.0
+offset_bottom = 124.0
+text = "9"
+
+[node name="map10btn" type="Button" parent="w1maps"]
+offset_left = 275.0
+offset_top = 95.0
+offset_right = 308.0
+offset_bottom = 126.0
+text = "10"
+
+[connection signal="pressed" from="exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="w1maps/map1btn" to="." method="_on_map_1_btn_pressed"]
+[connection signal="pressed" from="w1maps/map2btn" to="." method="_on_map_2_btn_pressed"]
+[connection signal="pressed" from="w1maps/map3btn" to="." method="_on_map_3_btn_pressed"]
+[connection signal="pressed" from="w1maps/map4btn" to="." method="_on_map_4_btn_pressed"]
+[connection signal="pressed" from="w1maps/map5btn" to="." method="_on_map_5_btn_pressed"]
+[connection signal="pressed" from="w1maps/map6btn" to="." method="_on_map_6_btn_pressed"]
+[connection signal="pressed" from="w1maps/map7btn" to="." method="_on_map_7_btn_pressed"]
+[connection signal="pressed" from="w1maps/map8btn" to="." method="_on_map_8_btn_pressed"]
+[connection signal="pressed" from="w1maps/map9btn" to="." method="_on_map_9_btn_pressed"]
+[connection signal="pressed" from="w1maps/map10btn" to="." method="_on_map_10_btn_pressed"]

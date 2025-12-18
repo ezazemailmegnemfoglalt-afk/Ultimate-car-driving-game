@@ -1,12 +1,18 @@
-[gd_scene load_steps=3 format=3 uid="uid://dumraa3ngb50j"]
+[gd_scene load_steps=5 format=3 uid="uid://dumraa3ngb50j"]
 
 [ext_resource type="Texture2D" uid="uid://cmo10ucndgq3g" path="res://images/road.png" id="1_6uuow"]
+[ext_resource type="Script" uid="uid://sovk86qdl7nd" path="res://objects/road.gd" id="1_psde0"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_psde0"]
-a = Vector2(-7.6293945e-06, 1.9999924)
-b = Vector2(240, 1.9999924)
+a = Vector2(-21.000023, 2)
+b = Vector2(256.99997, 2)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_a7f2l"]
+a = Vector2(-169, -5)
+b = Vector2(315, -5)
 
 [node name="road" type="Node2D"]
+script = ExtResource("1_psde0")
 
 [node name="Road" type="CharacterBody2D" parent="."]
 position = Vector2(121, 121)
@@ -31,3 +37,11 @@ texture = ExtResource("1_6uuow")
 position = Vector2(2.2888184e-05, 81)
 scale = Vector2(0.99999994, 0.99999994)
 shape = SubResource("SegmentShape2D_psde0")
+
+[node name="szopacs" type="Area2D" parent="."]
+position = Vector2(104, 314)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="szopacs"]
+shape = SubResource("SegmentShape2D_a7f2l")
+
+[connection signal="body_entered" from="szopacs" to="." method="_on_szopacs_body_entered"]

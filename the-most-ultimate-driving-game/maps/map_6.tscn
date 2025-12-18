@@ -1,0 +1,71 @@
+[gd_scene load_steps=8 format=3 uid="uid://cukiunemdtn6q"]
+
+[ext_resource type="Texture2D" uid="uid://cspdfktjn7jyq" path="res://images/bg1.png" id="1_e2osv"]
+[ext_resource type="PackedScene" uid="uid://dcrebj547jojk" path="res://objects/start.tscn" id="2_i28jj"]
+[ext_resource type="PackedScene" uid="uid://dumraa3ngb50j" path="res://objects/road.tscn" id="3_qk8c4"]
+[ext_resource type="PackedScene" uid="uid://bxydnaidg0hnj" path="res://objects/emelkedo.tscn" id="4_ap5pe"]
+[ext_resource type="PackedScene" uid="uid://cwrwgpqq2lw8d" path="res://objects/speeder.tscn" id="5_2jmpy"]
+[ext_resource type="PackedScene" uid="uid://dw1nr7ntj88to" path="res://maps/ring.tscn" id="6_i28jj"]
+[ext_resource type="PackedScene" uid="uid://c0qwnjyikbwgh" path="res://objects/finish.tscn" id="7_qk8c4"]
+
+[node name="map6" type="Node2D"]
+
+[node name="Bg1" type="Sprite2D" parent="."]
+z_index = -5
+position = Vector2(2549.9998, 512)
+scale = Vector2(5, 5)
+texture = ExtResource("1_e2osv")
+
+[node name="start" parent="." instance=ExtResource("2_i28jj")]
+position = Vector2(-179, 776)
+
+[node name="road" parent="." instance=ExtResource("3_qk8c4")]
+position = Vector2(60, 774)
+
+[node name="road2" parent="." instance=ExtResource("3_qk8c4")]
+position = Vector2(300, 774)
+
+[node name="emelkedo" parent="." instance=ExtResource("4_ap5pe")]
+position = Vector2(78, 451)
+
+[node name="Speeder" parent="." instance=ExtResource("5_2jmpy")]
+position = Vector2(299, 835)
+
+[node name="road3" parent="." instance=ExtResource("3_qk8c4")]
+position = Vector2(1269, 761)
+
+[node name="road4" parent="." instance=ExtResource("3_qk8c4")]
+position = Vector2(1507, 761)
+
+[node name="road5" parent="." instance=ExtResource("3_qk8c4")]
+position = Vector2(1747, 761)
+
+[node name="road6" parent="." instance=ExtResource("3_qk8c4")]
+position = Vector2(1987, 761)
+
+[node name="road7" parent="." instance=ExtResource("3_qk8c4")]
+position = Vector2(2227, 761)
+
+[node name="emelkedo2" parent="." instance=ExtResource("4_ap5pe")]
+position = Vector2(2243, 438)
+
+[node name="emelkedo3" parent="." instance=ExtResource("4_ap5pe")]
+position = Vector2(2855, 306)
+
+[node name="ring" parent="." instance=ExtResource("6_i28jj")]
+position = Vector2(3895, 404)
+
+[node name="ring2" parent="." instance=ExtResource("6_i28jj")]
+position = Vector2(3989, 459)
+
+[node name="ring3" parent="." instance=ExtResource("6_i28jj")]
+position = Vector2(4089, 507)
+
+[node name="road8" parent="." instance=ExtResource("3_qk8c4")]
+position = Vector2(4229, 795)
+
+[node name="road9" parent="." instance=ExtResource("3_qk8c4")]
+position = Vector2(4468, 795)
+
+[node name="finish" parent="." instance=ExtResource("7_qk8c4")]
+position = Vector2(4705, 796)

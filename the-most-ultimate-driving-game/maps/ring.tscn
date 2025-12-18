@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://dw1nr7ntj88to"]
+
+[ext_resource type="Texture2D" uid="uid://c2wu1svxpsw6v" path="res://images/kor1.png" id="1_n2vj1"]
+[ext_resource type="Texture2D" uid="uid://cbvatyto7djc7" path="res://images/kor2.png" id="2_cxm2r"]
+
+[node name="ring" type="Node2D"]
+
+[node name="Kor1" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(171, 118)
+scale = Vector2(3, 3)
+texture = ExtResource("1_n2vj1")
+
+[node name="Kor2" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(237, 117)
+scale = Vector2(3, 3)
+texture = ExtResource("2_cxm2r")

@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=3 uid="uid://cmxebj0yu4iii"]
+
+[ext_resource type="PackedScene" uid="uid://dumraa3ngb50j" path="res://objects/road.tscn" id="1_aecn0"]
+[ext_resource type="PackedScene" uid="uid://cwrwgpqq2lw8d" path="res://objects/speeder.tscn" id="2_80agw"]
+[ext_resource type="PackedScene" uid="uid://c0qwnjyikbwgh" path="res://objects/finish.tscn" id="3_yqq5a"]
+[ext_resource type="PackedScene" uid="uid://dcrebj547jojk" path="res://objects/start.tscn" id="4_1aruu"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="road" parent="." instance=ExtResource("1_aecn0")]
+position = Vector2(417, 350)
+
+[node name="road" parent="road" instance=ExtResource("1_aecn0")]
+position = Vector2(239, 0)
+
+[node name="road" parent="road/road" instance=ExtResource("1_aecn0")]
+position = Vector2(238, 0)
+
+[node name="road" parent="road/road/road" instance=ExtResource("1_aecn0")]
+position = Vector2(239, 0)
+
+[node name="Speeder" parent="road/road" instance=ExtResource("2_80agw")]
+position = Vector2(716, 61)
+
+[node name="road2" parent="road/road" instance=ExtResource("1_aecn0")]
+position = Vector2(955, 0)
+
+[node name="road3" parent="road/road" instance=ExtResource("1_aecn0")]
+position = Vector2(1376, 0)
+
+[node name="road4" parent="road/road" instance=ExtResource("1_aecn0")]
+position = Vector2(1616, -1)
+
+[node name="finish" parent="road/road" instance=ExtResource("3_yqq5a")]
+position = Vector2(1852, -1)
+
+[node name="start" parent="." instance=ExtResource("4_1aruu")]
+position = Vector2(177, 352)
